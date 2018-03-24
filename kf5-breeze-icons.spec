@@ -5,7 +5,7 @@
 Summary:	breeze icons
 Name:		kf5-%{kfname}
 Version:	5.39.0
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
@@ -22,6 +22,7 @@ BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	kf5-dirs
+Obsoletes:	breeze-icon-theme
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -52,5 +53,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{_iconsdir}/breeze-dark
 %{_iconsdir}/breeze
+%{_iconsdir}/breeze-dark
