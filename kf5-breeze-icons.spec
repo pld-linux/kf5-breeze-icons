@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	5.99
+%define		kdeframever	5.100
 %define		qtver		5.15.2
 %define		kfname		breeze-icons
 
 Summary:	breeze icons
 Name:		kf5-%{kfname}
-Version:	5.99.0
-Release:	2
+Version:	5.100.0
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	6316dfe394ef168032a66f765e50afb6
+# Source0-md5:	e305bbe60e62fc0bbe8de9d52182d95e
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Test-devel >= %{qtver}
