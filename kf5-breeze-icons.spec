@@ -8,7 +8,7 @@
 Summary:	breeze icons
 Name:		kf5-%{kfname}
 Version:	5.108.0
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
@@ -31,6 +31,7 @@ Obsoletes:	breeze-icon-theme
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		qt5dir		%{_libdir}/qt5
+%define		_enable_debug_packages	0
 
 %description
 Breeze-icons is a freedesktop.org compatible icon theme.
