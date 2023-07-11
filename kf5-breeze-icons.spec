@@ -8,7 +8,7 @@
 Summary:	breeze icons
 Name:		kf5-%{kfname}
 Version:	5.108.0
-Release:	2
+Release:	3
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
@@ -94,5 +94,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
+%dir %{_libdir}/cmake/KF5BreezeIcons
 %{_libdir}/cmake/KF5BreezeIcons/KF5BreezeIconsConfig.cmake
 %{_libdir}/cmake/KF5BreezeIcons/KF5BreezeIconsConfigVersion.cmake
