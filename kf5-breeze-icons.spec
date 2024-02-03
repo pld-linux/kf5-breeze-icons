@@ -1,21 +1,21 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	5.114
+%define		kdeframever	5.249.0
 %define		qtver		5.15.2
 %define		kfname		breeze-icons
 
 Summary:	breeze icons
 Name:		kf5-%{kfname}
-Version:	5.114.0
-Release:	1
+Version:	5.249.0
+Release:	0.1
 License:	LGPL v2.1+
 Group:		X11/Libraries
-Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	ec40ee1de6deb23863829a4d653e6a9a
+Source0:	https://download.kde.org/unstable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
+# Source0-md5:	33f333b3e666d8ee5fbebc6f93251223
 URL:		http://www.kde.org/
-BuildRequires:	Qt5Core-devel >= %{qtver}
-BuildRequires:	Qt5Test-devel >= %{qtver}
+BuildRequires:	Qt6Core-devel >= %{qtver}
+BuildRequires:	Qt6Test-devel >= %{qtver}
 BuildRequires:	cmake >= 3.16
 BuildRequires:	gettext-devel
 BuildRequires:	kf5-extra-cmake-modules >= %{version}
@@ -30,7 +30,7 @@ Requires:	%{name}-data = %{version}-%{release}
 Obsoletes:	breeze-icon-theme
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		qt5dir		%{_libdir}/qt5
+%define		qt6dir		%{_libdir}/qt6
 %define		_enable_debug_packages	0
 
 %description
@@ -93,6 +93,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%dir %{_libdir}/cmake/KF5BreezeIcons
-%{_libdir}/cmake/KF5BreezeIcons/KF5BreezeIconsConfig.cmake
-%{_libdir}/cmake/KF5BreezeIcons/KF5BreezeIconsConfigVersion.cmake
+%dir %{_libdir}/cmake/KF6BreezeIcons
+%{_libdir}/cmake/KF6BreezeIcons/KF6BreezeIconsConfig.cmake
+%{_libdir}/cmake/KF6BreezeIcons/KF6BreezeIconsConfigVersion.cmake
