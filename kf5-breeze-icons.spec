@@ -23,7 +23,7 @@ BuildRequires:	kf5-extra-cmake-modules >= %{version}
 BuildRequires:	ninja
 BuildRequires:	pkgconfig
 BuildRequires:	qt5-linguist >= %{qtver}
-BuildRequires:	rpm-build(macros) >= 4.6
+BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpmbuild(macros) >= 1.605
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
