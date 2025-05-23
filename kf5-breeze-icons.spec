@@ -29,7 +29,7 @@ BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	kf5-dirs
 Requires:	%{name}-data = %{version}-%{release}
-Obsoletes:	breeze-icon-theme
+Obsoletes:	breeze-icon-theme < 5.240
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_enable_debug_packages	0
@@ -44,6 +44,7 @@ Breeze-icons to motyw ikon zgodny z freedesktop.org.
 Summary:	Data files for %{kfname}
 Summary(pl.UTF-8):	Dane dla %{kfname}
 Group:		X11/Applications
+Conflicts:	kf6-breeze-icons-data
 BuildArch:	noarch
 
 %description data
